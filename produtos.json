@@ -1,0 +1,29 @@
+[
+    {
+        "id":        "", 
+        "nome":      "",
+        "categoria": "",
+        "descricao": "",
+        "imagem":    "",
+        "video":     "",
+        "preco":     "",
+        "promocao":  "",
+        "estoque":   "",
+
+        "marca":     "",
+        "modelo":    "",
+
+        "media_avaliacao": "",
+        "avaliacoes": [
+            {
+                "usuario": "",
+                "nota": "",
+                "comentario": ""
+            }
+        ],
+
+        "imagens_extra": [
+            
+        ]
+    }
+]
