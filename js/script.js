@@ -66,10 +66,12 @@ function criarProdutos(){
 
         // Valor dos elementos
         div.classList.add("produto")
+        p2.classList.add("preco")
+        
         img.src = PLACEHOLDERIMG
         h4.innerHTML = produto.nome
         p1.innerHTML = produto.preco + " R$"
-        p2.innerHTML = produto.precoDesconto + " R$"
+        p2.innerHTML = produto.precoDesconto.toFixed(2) + " R$"
         a.innerHTML = "Comprar"
         del.appendChild(p1)
 

@@ -29,6 +29,14 @@ footer{
     padding: 10px;
 }
 
+footer .ico{
+    width: 20px;
+}
+
+del{
+    color: rgb(185, 61, 61);
+}
+
 .icon{
     width: 25px;
 }
