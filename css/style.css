@@ -54,14 +54,39 @@ del{
 }
 
 .produto{
-    margin: 2px;
+    padding: 10px;
+    margin: 5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: azure;
+    background-color: white;
     border: 1px grey solid;
     border-radius: 2px;
+    max-width: 300px;
+    /* max-height: ; */
+}
+
+.produto h4 {
+    text-align: center;
+}
+
+.produto .preco {
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+.produto a {
+    background-color: green;
+    width: 100%;
+    padding: 10px;
+    color: white !important;
+    text-align: center;
+}
+
+.produto a:hover {
+    background-color: greenyellow;
+    color: black !important;
 }
 
 .produto:hover{
@@ -71,6 +96,7 @@ del{
 }
 
 .produto img{
+    margin-bottom: 20px;
     width: 200px;
-
+    height: 200px;
 }

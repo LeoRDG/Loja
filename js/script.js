@@ -69,6 +69,7 @@ function criarProdutos(){
         p2.classList.add("preco")
         
         img.src = PLACEHOLDERIMG
+        img.src = `img/${produto.id}.png`
         h4.innerHTML = produto.nome
         p1.innerHTML = produto.preco + " R$"
         p2.innerHTML = produto.precoDesconto.toFixed(2) + " R$"

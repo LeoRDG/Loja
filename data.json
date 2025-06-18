@@ -23,7 +23,7 @@
     },
     {
       "id": "003",
-      "nome": "Memória Kingston Fury Beast 16GB DDR4 3200MHz",
+      "nome": "Memória Kingston Fury Beast 16GB DDR4",
       "categoria": "Componentes > Memória RAM",
       "descricao": "Módulo de memória com dissipador de calor e alto desempenho para PCs gamer.",
       "preco": 359.90,
@@ -67,7 +67,7 @@
     },
     {
       "id": "007",
-      "nome": "Teclado Mecânico Redragon Kumara K552 RGB",
+      "nome": "Teclado Mecânico Redragon Kumara K552",
       "categoria": "Periféricos > Teclados",
       "descricao": "Teclado compacto com switches Outemu Blue, retroiluminação RGB e construção em metal.",
       "preco": 239.90,
@@ -111,7 +111,7 @@
     },
     {
         "id": "011",
-        "nome": "Notebook Acer Aspire 5 A515-45-R760 Ryzen 5 5500U",
+        "nome": "Notebook Acer Aspire 5 A515-45",
         "categoria": "Computadores > Notebooks",
         "descricao": "Notebook com processador AMD Ryzen 5, 8GB de RAM e SSD de 256GB. Ideal para estudos, trabalho remoto e tarefas do dia a dia com excelente desempenho e portabilidade.",
         "preco": 2999.90,
@@ -122,7 +122,7 @@
       },
       {
         "id": "012",
-        "nome": "Impressora Multifuncional HP DeskJet Ink Advantage 2774",
+        "nome": "Impressora HP DeskJet Ink Advantage 2774",
         "categoria": "Periféricos > Impressoras",
         "descricao": "Multifuncional com impressão, cópia e digitalização. Conectividade via Wi-Fi e suporte ao aplicativo HP Smart para impressões rápidas e práticas.",
         "preco": 399.00,
@@ -177,7 +177,7 @@
       },
       {
         "id": "018",
-        "nome": "Cooler para CPU Cooler Master Hyper 212 Black Edition",
+        "nome": "Cooler para CPU Cooler Master Hyper 212",
         "categoria": "Componentes > Coolers e Refrigeração",
         "descricao": "Sistema de refrigeração a ar com dissipador em alumínio e ventoinha silenciosa. Ideal para manter a temperatura do processador sob controle em tarefas exigentes.",
         "preco": 259.00,
@@ -262,72 +262,6 @@
         "fabricante": "Exbom",
         "modelo": "CBX-HM20",
         "estoque": 120
-      },
-      {
-        "id": "031",
-        "nome": "Processador Intel Core i5-12400F 2.5GHz (4.4GHz Turbo)",
-        "categoria": "Componentes > Processadores",
-        "descricao": "Processador de 12ª geração com 6 núcleos e 12 threads, ideal para usuários que buscam desempenho sólido em jogos e tarefas multitarefa com bom custo-benefício.",
-        "preco": 1049.90,
-        "promocao": 0.1,
-        "fabricante": "Intel",
-        "modelo": "i5-12400F",
-        "estoque": 25
-      },
-      {
-        "id": "032",
-        "nome": "Monitor LG 24'' Full HD IPS 75Hz",
-        "categoria": "Periféricos > Monitores",
-        "descricao": "Monitor de 24 polegadas com painel IPS, resolução Full HD, taxa de atualização de 75Hz e tecnologia AMD FreeSync. Excelente para produtividade e lazer.",
-        "preco": 849.00,
-        "promocao": 0.2,
-        "fabricante": "LG",
-        "modelo": "24MK430H",
-        "estoque": 18
-      },
-      {
-        "id": "033",
-        "nome": "Memória RAM Kingston Fury Beast 16GB DDR4 3200MHz",
-        "categoria": "Componentes > Memórias RAM",
-        "descricao": "Módulo de memória de alto desempenho DDR4 com dissipador de calor. Ideal para gamers, criadores de conteúdo e usuários exigentes.",
-        "preco": 369.90,
-        "promocao": 0.12,
-        "fabricante": "Kingston",
-        "modelo": "Fury Beast 16GB",
-        "estoque": 42
-      },
-      {
-        "id": "034",
-        "nome": "Gabinete Gamer Redragon GC-602",
-        "categoria": "Componentes > Gabinetes",
-        "descricao": "Gabinete com painel lateral em vidro temperado, 3 coolers com LED RGB, bom fluxo de ar e amplo espaço interno para montagem de setups gamer.",
-        "preco": 389.90,
-        "promocao": 0.15,
-        "fabricante": "Redragon",
-        "modelo": "GC-602",
-        "estoque": 10
-      },
-      {
-        "id": "035",
-        "nome": "Teclado Mecânico Gamer Redragon Kumara RGB",
-        "categoria": "Periféricos > Teclados",
-        "descricao": "Teclado compacto com switches Outemu Blue, iluminação RGB customizável e estrutura resistente em metal. Perfeito para quem busca precisão e estilo.",
-        "preco": 249.00,
-        "promocao": 0.18,
-        "fabricante": "Redragon",
-        "modelo": "K552 RGB",
-        "estoque": 35
-      },
-      {
-        "id": "036",
-        "nome": "Mouse Gamer Logitech G203 Lightsync",
-        "categoria": "Periféricos > Mouses >",
-        "descricao": "Mouse com sensor de 8000 DPI, iluminação RGB Lightsync e design ergonômico. Excelente resposta para jogos competitivos e uso geral.",
-        "preco": 179.90,
-        "promocao": 0.1,
-        "fabricante": "Logitech",
-        "modelo": "G203",
-        "estoque": 60
       },
       {
         "id": "037",
