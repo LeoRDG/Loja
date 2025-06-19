@@ -1,6 +1,6 @@
 // Carregar os dados dos produtos
 let produtos = []
-fetch("../data.json").then(response => response.json()).then(data => {
+fetch("https://xle00.github.io/Loja/data.json").then(response => response.json()).then(data => {
     // produtos = data
     
     // Calcular descontos
