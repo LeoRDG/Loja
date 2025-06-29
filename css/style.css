@@ -2,11 +2,80 @@
      margin: 0;
      padding: 0;
      box-sizing: border-box;
+     /* outline: 1px solid red; */
+     font-family: Inter;
+ }
+
+ :root {
+     --primary: #0a1f44;
+     --primary-light: #007bff;
+     --primary-bg: #f4f6f8;
+     --red: #d32f2f;
+     --orange: #ff6d00;
+     --green: #00c853;
+ }
+
+ #newsletter,
+ header,
+ .comprar {
+     background-color: var(--primary) !important;
+     color: var(--primary-bg) !important;
+ }
+
+ #newsletter button {
+     background-color: #113168;
+     color: var(--primary-bg);
+     font-weight: bold;
+ }
+
+ #newsletter * {
+     border: none;
+ }
+
+ input:focus:invalid {
+     border: 5px var(--red);
+
+ }
+
+ .comprar:hover,
+ #newsletter button:hover {
+     background-color: var(--primary-light) !important;
+ }
+
+ li {
+     font-weight: bold;
+ }
+
+ li a {
+     color: var(--primary-bg) !important;
+ }
+
+ #newsletter {
+     background-color: var(--primary);
+ }
+
+ footer {
+     background-color: var(--primary-bg);
+ }
+
+ .preco {
+     color: var(--primary-light) !important;
+ }
+
+ a {
+     color: var(--primary-light);
  }
 
  .produto {
+
      width: 300px;
-     background: #FFFFFF88 !important;
+     background: var(--primary-bg) !important;
+ }
+
+ .produto:hover {
+     border-color: var(--primary) !important;
+     transform: scale(1.01);
+     cursor: pointer
  }
 
  .img-div {
@@ -20,142 +89,59 @@
  }
 
  .icon {
-    height: 38px;
+     height: 38px;
+     margin: 3px;
  }
 
  a .icon {
-    margin: 10px;
+     margin: 10px;
  }
 
- /*
-.logo{
-    height: 100px;
-}
+ .item-menu:hover {
+     background-color: var(--primary-light);
+ }
 
-nav ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    
-}
+ .logo {
+     max-height: 100px;
+ }
 
-nav li{
-    list-style: none;
-}
+ .topo {
+     position: fixed;
+     right: 20px;
+     bottom: 20px;
+ }
 
-header{
-    background-color: beige;
-    padding: 10px 0px;
-}
+ .wpp {
+     position: fixed;
+     left: 20px;
+     bottom: 20px;
+     background: linear-gradient(180deg, #25d366, #35a336);
+     /* background-color: gradient(#25d366); */
+     border-radius: 50%;
+     padding: 5px;
+ }
 
-footer{
-    background-color: tan;
-}
+ .pesquisa *,
+ .nl-email * {
+     background-color: white;
+     height: 50px;
+ }
 
-footer .ico{
-    width: 20px;
-}
+ .pesquisa input,
+ .nl-email input {
+     border-width: 1px 0px 1px 1px;
+     border-radius: 20px 0 0px 20px;
+ }
 
-del{
-    color: rgb(185, 61, 61);
-}
+ .pesquisa button,
+ .nl-email button {
+     border: rgba(128, 128, 128, 0.363) solid;
+     border-width: 1px 1px 1px 0px;
+     border-radius: 0px 20px 20px 0px;
+     width: 60px;
+ }
 
-.icon{
-    width: 50px;
-}
-
-#banner{
-    font-size: 300px;
-    height: 300px;
-    background-color: coral;
-}
-
-#lista-produtos{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 20px;
-}
-
-.produto{
-    padding: 10px;
-    margin: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    border: 1px grey solid;
-    border-radius: 2px;
-    max-width: 300px;
-    /* max-height: ; 
-}
-
-.produto h4 {
-    text-align: center;
-}
-
-.produto .preco {
-    font-weight: bold;
-    font-size: 1.25em;
-}
-
-.produto a {
-    background-color: green;
-    width: 100%;
-    padding: 10px;
-    color: white !important;
-    text-align: center;
-}
-
-.produto a:hover {
-    background-color: greenyellow;
-    color: black !important;
-}
-
-.produto:hover{
-    background-color: rgb(164, 232, 232);
-    cursor: pointer;
-    transform: scale(1.02);
-}
-
-.produto img{
-    margin-bottom: 20px;
-    width: 200px;
-    height: 200px;
-}
-
-
-#newsletter {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: darkcyan;
-    padding: 10px;
-    height: fit-content;
-}
-
-#newsletter input {
-    font-size: 1em;
-    height: 50px;
-    vertical-align: middle;
-}
-
-#newsletter input[type="email"] {
-    border-radius: 30px 0px 0px 30px;
-    min-width: 60%;
-    width: 400px;
-    padding-left: 20px;
-}
-
-#newsletter input[type="submit"] {
-    border-style: none;
-    border-radius: 0px 30px 30px 0px;
-    width: 175px;
-}
-
-#newsletter label{
-    margin: 10px;
-    text-align: center;
-    background-color: red;
-    max-width: 300px;
-} */
+ .nl-email button {
+     width: 150px;
+     background-color: red;
+ }
