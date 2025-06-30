@@ -55,11 +55,11 @@ main select {
 
 
 main input[type="email"] {
-    background-image: url("/img/icons/email.svg");
+    background-image: url("../img/icons/email.svg");
 }
 
 main input[type="password"] {
-    background-image: url("/img/icons/password.svg");
+    background-image: url("../img/icons/password.svg");
 }
 
 main input[type="email"],
@@ -104,11 +104,11 @@ main button:hover {
 }
 
 #google {
-    background: url("/img/icons/google.svg");
+    background: url("../img/icons/google.svg");
 }
 
 #facebook {
-    background: url("/img/icons/facebookC.svg");
+    background: url("../img/icons/facebookC.svg");
 }
 
 #google,
