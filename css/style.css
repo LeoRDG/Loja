@@ -15,6 +15,38 @@
      --green: #00c853;
  }
 
+ body,
+ main {
+     background: var(--primary-bg);
+ }
+
+ header,
+ body {
+     overflow: visible;
+ }
+
+ .esconder {
+     display: none;
+ }
+
+ header {
+     border: solid var(--primary-bg);
+     border-width: 0 0 2px 0;
+     position: sticky;
+     top: 0;
+     z-index: 2
+ }
+
+ #carouselId img {
+     height: 500px;
+     object-fit: contain;
+ }
+
+ #carouselId {
+     background: linear-gradient(var(--primary), var(--primary-light));
+ }
+
+
  #newsletter,
  header,
  .comprar {
@@ -22,10 +54,37 @@
      color: var(--primary-bg) !important;
  }
 
+ #newsletter {
+     display: flex;
+     flex-wrap: wrap;
+
+     background-color: var(--primary);
+ }
+
+ #newsletter>div,
+ #newsletter>form {
+     flex: 1 1 100%;
+     max-width: 100%;
+ }
+
+ @media (min-width: 768px) {
+
+     #newsletter>div,
+     #newsletter>form {
+         flex: 1 1 50%;
+         max-width: 50%;
+     }
+ }
+
  #newsletter button {
-     background-color: #113168;
+     /* background-color: #113168; */
+     background-color: #ffffff15;
      color: var(--primary-bg);
      font-weight: bold;
+ }
+
+ ins {
+     text-decoration: none;
  }
 
  #newsletter * {
@@ -37,11 +96,6 @@
 
  }
 
- .comprar:hover,
- #newsletter button:hover {
-     background-color: var(--primary-light) !important;
- }
-
  li {
      font-weight: bold;
  }
@@ -50,12 +104,12 @@
      color: var(--primary-bg) !important;
  }
 
- #newsletter {
-     background-color: var(--primary);
- }
-
  footer {
      background-color: var(--primary-bg);
+ }
+
+ footer *:not(#newsletter *) {
+     color: var(--primary);
  }
 
  .preco {
@@ -67,9 +121,8 @@
  }
 
  .produto {
-
      width: 300px;
-     background: var(--primary-bg) !important;
+     background: rgb(249, 249, 249) !important;
  }
 
  .produto:hover {
@@ -93,22 +146,32 @@
      margin: 3px;
  }
 
+ a .icon:hover {
+     scale: 1.1;
+ }
+
  a .icon {
      margin: 10px;
  }
 
- .item-menu:hover {
-     background-color: var(--primary-light);
+ .logo {
+     min-width: 250px;
+     max-height: 100px;
  }
 
- .logo {
-     max-height: 100px;
+ .hover-highlight:hover {
+     background-color: var(--primary-light) !important;
  }
 
  .topo {
      position: fixed;
      right: 20px;
      bottom: 20px;
+     width: fit-content;
+     aspect-ratio: 1;
+     border-radius: 100% !important;
+     background-color: var(--primary) !important;
+     color: var(--primary-bg) !important;
  }
 
  .wpp {
@@ -139,6 +202,11 @@
      border-width: 1px 1px 1px 0px;
      border-radius: 0px 20px 20px 0px;
      width: 60px;
+ }
+
+ .pesquisa button:hover {
+     color: var(--primary-light);
+     background-color: var(--primary-bg);
  }
 
  .nl-email button {

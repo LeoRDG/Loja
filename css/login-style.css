@@ -1,69 +1,105 @@
-.login {
-    width: 50%;
-    margin: 100px;
+main {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--primary-bg);
+    align-items: center;
 }
 
-.login fieldset {
+main * {
+    color: var(--primary);
+}
 
+main form {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+
+main fieldset:not(fieldset fieldset) {
+    max-width: 750px;
     display: flex;
     flex-direction: column;
     border: #00000044 2px solid;
     padding: 30px;
     border-radius: 30px;
     background: #ffffff00;
-    min-width: 400px;
 }
 
-.login * {
-    color: var(--primary)
+fieldset fieldset {
+    border: 1px #00000044 solid;
+    margin: 10px 0;
+    border-radius: 10px;
 }
 
-.login fieldset div {
+.login fieldset div,
+.cadastro fieldset div:not(.generos) {
     display: flex;
     flex-direction: column;
-    margin: 20px;
+    margin: 20px 5px;
 }
 
-main {
-    display: flex;
-    justify-content: center;
-    /* background: linear-gradient(var(--primary), var(--primary-light)); */
-    background-color: var(--primary-bg);
-    align-items: center;
-}
-
-.login input {
+main input,
+main select {
     background-color: #ffffff00;
     border: var(--primary) solid;
     border-width: 0 0 2px 0;
     font-size: 20px;
     margin: 10px;
-    padding: 10px;
+    padding: 5px;
     outline: none;
 }
 
+main select {
+    margin-top: 30px;
+}
+
+
 main input[type="email"] {
     background-image: url("/img/icons/email.svg");
+}
+
+main input[type="password"] {
+    background-image: url("/img/icons/password.svg");
+}
+
+main input[type="email"],
+main input[type="password"] {
     background-size: 35px;
     background-repeat: no-repeat;
-    background-position: 2px 8px;
+    background-position: 2px 3px;
     padding-left: 50px;
 }
 
-.login input:focus {
-    /* border: var(--primary-bg) solid; */
-    /* border-width: 0 0 2px 0; */
+.login input:focus,
+.cadastro input:focus {
+    border: var(--primary-light) solid;
+    border-width: 0 0 2px 0;
 }
 
-.login button {
+.login button,
+.cadastro button {
     background: linear-gradient(90deg, var(--primary), var(--primary-light));
     border-radius: 30px;
     height: 50px;
     font-weight: bold;
     border-style: none;
+    color: var(--primary-bg);
+    margin: 3px;
 }
 
-.login button:hover {
+#cadastro-toggle {
+    border: 2px solid lightgrey;
+    border-width: 0 0 2px 0;
+    width: 100%;
+    font-size: 1.4em;
+    background-color: var(--primary-bg);
+}
+
+#limpar {
+    background: linear-gradient(90deg, var(--red), var(--orange));
+}
+
+main button:hover {
     scale: 1.05
 }
 
@@ -85,6 +121,7 @@ main input[type="email"] {
     min-width: 300px;
     border: solid 1px lightgrey;
     margin: 2px;
+    color: var(--primary);
 }
 
 .login-externo {
@@ -92,13 +129,6 @@ main input[type="email"] {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-}
-
-.login img {
-    background-color: none;
-    width: 50px;
-    height: inherit;
-    margin: 10px;
 }
 
 .login a {

@@ -1,0 +1,92 @@
+.produtoP {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    background-color: var(--primary-bg);
+}
+
+.produtoP img {
+    width: 500px;
+}
+
+h2 {
+    text-transform: uppercase;
+}
+
+table,
+td,
+th {
+    border: 1px lightgrey solid;
+}
+
+#info {
+    padding-left: 10px;
+}
+
+#btn-comprar {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.verde {
+    color: var(--green)
+}
+
+.laranja {
+    color: var(--orange)
+}
+
+
+#preco {
+    font-size: 40px;
+    font-weight: bolder;
+    color: var(--primary-light);
+}
+
+td,
+th {
+    padding: 2px 20px;
+}
+
+th,
+#btn-comprar {
+    background-color: var(--primary);
+    color: var(--primary-bg);
+}
+
+tbody tr:nth-child(odd) {
+    background-color: rgb(238, 238, 238);
+}
+
+#preco-original {
+    color: var(--red);
+}
+
+#desconto {
+    color: var(--red);
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.dsc {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    left: 35%;
+    transform: translate(-30%, 0);
+    width: 70%;
+    justify-content: center;
+    font-size: 1.25em;
+    padding: 10px 0 40px 0;
+    margin: 40px 0 0 0;
+    border: solid lightgrey;
+    border-width: 2px 0 0 0;
+}
