@@ -17,37 +17,35 @@
 </head>
 
 <body>
-    <a title="Voltar ao topo" class="topo btn material-symbols-outlined btn-primary" href="#">keyboard_arrow_up</a>
-    <a class="wpp" href=""><img class="icon" src="img/icons/whatsapp.svg" alt=""></a>
+    <a title="Voltar ao topo" class="topo hover-highlight btn material-symbols-outlined d-flex align-items-center"
+        href="#">keyboard_arrow_up</a>
+    <a class="wpp" href=""><img class="icon" src="/img/icons/whatsapp.svg" alt=""></a>
 
     <header>
         <nav class="container-fluid flex-wrap d-flex align-items-center justify-content-center">
             <a class="navbar-brand" href="index.html">
-                <img class="logo img-fluid"
-                    src="https://www.goomlandscapes.co.nz/wp-content/uploads/2018/08/logo-placeholder.png" alt="">
+                <img id="logo" class="logo img-fluid" src="/img/logo.png" alt="">
             </a>
 
-            <form class="pesquisa d-flex flex-grow-1 mx-2">
-                <input class="form-control" type="text" placeholder="Faça uma pesquisa...">
-                <button class="material-symbols-outlined">search</button>
+            <form method="get" action="/index.html" class="pesquisa d-flex flex-grow-1 mx-2">
+                <input name="pesquisa" class="form-control" type="search" required placeholder="Faça uma pesquisa...">
+                <button class="material-symbols-outlined" type="submit">search</button>
             </form>
 
-            <a class="me-3" href="login.html">Faça <strong>Login</strong> ou
+            <a id='faz-login' class="me-3" href="login.html">Faça <strong>Login</strong> ou
                 <strong>Cadastre-se</strong></a>
-
-            <a class="material-symbols-outlined fs-2" title="Carrinho">shopping_cart</a>
         </nav>
 
-        <nav class="navbar navbar-expand-md">
-            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse"
+        <nav id="sticky" class="navbar navbar-expand-lg p-0">
+            <button class="hover-highlight navbar-toggler text-white" type="button" data-bs-toggle="collapse"
                 data-bs-target="#categorias">
-                <i class="material-symbols-outlined">menu</i>
+                <i class="material-symbols-outlined fs-1">menu</i>
             </button>
 
             <div class="collapse navbar-collapse justify-content-center" id="categorias">
                 <ul class="navbar-nav" id="menu-categorias">
                     <li class="nav-item fs-5">
-                        <a class="nav-link active item-menu" href="#">Todos</a>
+                        <a class="hover-highlight nav-link active item-menu" href="index.html">Todos</a>
                     </li>
                 </ul>
             </div>
@@ -55,19 +53,19 @@
     </header>
 
     <main>
-        <form class="login" action="/pagina.php">
+        <form class="container-fluid login" action="/login.php" method="post">
             <fieldset>
                 <legend>Login</legend>
 
                 <div class="entrada">
-                    <label for="" class="form-label">Email</label>
-                    <input type="email" class="" name="" id="" aria-describedby="emailHelpId"
-                        placeholder="Digite seu email" />
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" class="email" name="email" required placeholder="Digite seu email" />
                 </div>
 
                 <div class="entrada">
-                    <label for="" class="">Senha</label>
-                    <input type="password" class="" name="" id="" placeholder="Digite sua senha" />
+                    <label for="senha" class="">Senha</label>
+                    <input type="password" id="senha" class="senha" name="senha" required
+                        placeholder="Digite sua senha" />
                 </div>
 
                 <a href="">Esqueceu sua senha?</a>
@@ -75,28 +73,106 @@
                 <button type="submit" class="btn btn-primary w-100">LOGIN</button>
 
                 <div class="login-externo">
-                    <button id="google">Entrar com Google</button>
-                    <button id="facebook">Entrar com Facebook</button>
+                    <button type='button' id="google">Entrar com Google</button>
+                    <button type='button' id="facebook">Entrar com Facebook</button>
                 </div>
-
             </fieldset>
         </form>
 
+        <button class="hover-highlight" id="cadastro-toggle" type="button" data-bs-toggle="collapse"
+            data-bs-target="#cadastro">Cadastro</button>
 
+        <form class="collapse container-fluid cadastro" id="cadastro" action="/cadastro.php" method="get">
+            <fieldset>
+                <legend>Cadastro</legend>
+                <fieldset>
+                    <div>
+                        <label for="nomeC">Nome: </label>
+                        <input type="text" id="nomeC" class="nome" name="nome" required placeholder="Digite seu nome" />
+                    </div>
+
+                    <div>
+                        <label for="snomeC">Sobrenome: </label>
+                        <input type="text" id="snomeC" class="sobrenome" name="sobrenome" required
+                            placeholder="Digite seu sobrenome" />
+                    </div>
+
+                    <div>
+                        <label for="cpf">CPF: </label>
+                        <input type="text" id="cpf" class="cpf" name="cpf" required placeholder="Digite seu CPF" />
+                    </div>
+
+                    <div class="generos">
+                        <input required type="radio" name="genero" value="m" id="m">
+                        <label for="m">Masculino</label>
+
+                        <input required type="radio" name="genero" value="f" id="f">
+                        <label for="f">Feminino</label>
+
+                        <input required type="radio" name="genero" value="o" id="o">
+                        <label for="o">Outro</label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <div>
+                        <label for="estado">Estado: </label>
+                        <select id="estado" name="estado" id="estado">
+                            <option disabled selected="selected">Selecione seu estado</option>
+                            <option id="rs" value="rs">Rio Grande do Sul</option>
+                            <option id="sc" value="sc">Santa Catarina</option>
+                            <option id="pr" value="pr">Paraná</option>
+                            <option id="sp" value="sp">São Paulo</option>
+                            <option id="rj" value="rj">Rio de Janeiro</option>
+                            <option id="mg" value="mg">Minas Gerais</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="cidade">Cidade: </label>
+                        <input type="text" id="cidade" name="cidade" id="cidade" placeholder="Sua Cidade">
+                    </div>
+
+                    <div>
+                        <label for="cep">CEP: </label>
+                        <input type="number" name="cep" id="cep" placeholder="Seu Cep" min="01000000" max="99999999">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <div>
+                        <label for="emailC">Email:</label>
+                        <input type="email" id="emailC" class="email" name="email" required
+                            placeholder="Digite seu email" />
+                    </div>
+                    <div>
+                        <label for="senhaC">Senha:</label>
+                        <input type="password" id="senhaC" class="senha" name="senha" required
+                            placeholder="Digite sua senha" />
+                    </div>
+                </fieldset>
+                <div class="botoes">
+                    <button id="limpar" type="reset">LIMPAR</button>
+                    <button id="cadastrar" type="submit">CADASTRAR</button>
+                </div>
+            </fieldset>
+        </form>
     </main>
 
-    <footer class="p-1 mt-4">
-        <div class='row p-3 text-center flex-wrap justify-content-center' id="newsletter" action="">
-            <div class="p-1 col-12 col-md-6">
+    <footer>
+
+        <div class='p-3 text-center' id="newsletter">
+            <div class="p-1 container-fluid">
                 <h4 class="text-start">ENTRE EM NOSSA NEWSLETTER,</h4>
-                <p class="text-start" for="email">Inscreva-se para receber ofertas e
+                <p class="text-start">Inscreva-se para receber ofertas e
                     descontos
                     exclusivos!</p>
             </div>
-            <form class="p-1 col-12 col-md-6 d-flex nl-email align-items-center">
+
+            <form class="p-1 d-flex nl-email container-fluid">
                 <input class="search-input form-control" type="email" name="email" id="email"
                     placeholder="Digite o seu email.." required>
-                <button class="search-input" type="submit">CADASTRAR</button>
+                <button class="hover-highlight" type="submit">CADASTRAR</button>
             </form>
         </div>
 

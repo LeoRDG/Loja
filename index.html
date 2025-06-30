@@ -17,37 +17,35 @@
 </head>
 
 <body>
-    <a title="Voltar ao topo" class="topo btn material-symbols-outlined btn-primary" href="#">keyboard_arrow_up</a>
+    <a title="Voltar ao topo" class="topo hover-highlight btn material-symbols-outlined d-flex align-items-center"
+        href="#">keyboard_arrow_up</a>
     <a class="wpp" href=""><img class="icon" src="img/icons/whatsapp.svg" alt=""></a>
 
     <header>
         <nav class="container-fluid flex-wrap d-flex align-items-center justify-content-center">
-            <a class="navbar-brand" href="#">
-                <img class="logo img-fluid"
-                    src="https://www.goomlandscapes.co.nz/wp-content/uploads/2018/08/logo-placeholder.png" alt="">
+            <a class="navbar-brand" href="index.html">
+                <img id="logo" class="logo img-fluid" src="/img/logo.png" alt="">
             </a>
 
-            <form class="pesquisa d-flex flex-grow-1 mx-2">
-                <input class="form-control" type="text" placeholder="Faça uma pesquisa...">
-                <button class="material-symbols-outlined">search</button>
+            <form method="get" action="/index.html" class="pesquisa d-flex flex-grow-1 mx-2">
+                <input name="pesquisa" class="form-control" type="search" required placeholder="Faça uma pesquisa...">
+                <button class="material-symbols-outlined" type="submit">search</button>
             </form>
 
-            <a class="me-3" href="login.html">Faça <strong>Login</strong> ou
+            <a id='faz-login' class="me-3" href="login.html">Faça <strong>Login</strong> ou
                 <strong>Cadastre-se</strong></a>
-
-            <a class="material-symbols-outlined fs-2" title="Carrinho">shopping_cart</a>
         </nav>
 
-        <nav class="navbar navbar-expand-md">
-            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse"
+        <nav id="sticky" class="navbar navbar-expand-lg p-0">
+            <button class="hover-highlight navbar-toggler text-white" type="button" data-bs-toggle="collapse"
                 data-bs-target="#categorias">
-                <i class="material-symbols-outlined">menu</i>
+                <i class="material-symbols-outlined fs-1">menu</i>
             </button>
 
             <div class="collapse navbar-collapse justify-content-center" id="categorias">
                 <ul class="navbar-nav" id="menu-categorias">
                     <li class="nav-item fs-5">
-                        <a class="nav-link active item-menu" href="#">Todos</a>
+                        <a class="hover-highlight nav-link active item-menu" href="index.html">Todos</a>
                     </li>
                 </ul>
             </div>
@@ -56,51 +54,54 @@
 
     <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
         <ol class="carousel-indicators">
-            <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true"
-                aria-label="First slide"></li>
-            <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
+            <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#carouselId" data-bs-slide-to="1"></li>
+            <li data-bs-target="#carouselId" data-bs-slide-to="2"></li>
         </ol>
         <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
-                <img style="height: 500px;" src="https://www.designi.com.br/images/preview/11954986.jpg" class="w-100 "
-                    alt="Banner 1" />
+                <a href="/produto.html?id=045"><img src="/img/banners/b3.png" class="w-100 img-fluid"
+                        alt="Banner 1" /></a>
             </div>
             <div class="carousel-item">
-                <img style="height: 500px;"
-                    src="https://explorercomputadores.com/explorer-novo/wp-content/uploads/2020/06/BANNER-VENDA-COMPUTADORES.jpg"
-                    class="w-100" alt="Banner 2" />
+                <a href="/produto.html?id=046"><img src="/img/banners/b2.png" class="w-100 img-fluid"
+                        alt="Banner 2" /></a>
+            </div>
+            <div class="carousel-item">
+                <img src="/img/banners/b1.png" class="w-100 img-fluid" alt="Banner 3" />
             </div>
         </div>
+
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="carousel-control-prev-icon"></span>
             <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="carousel-control-next-icon"></span>
             <span class="visually-hidden">Next</span>
         </button>
     </div>
 
-    <main class="container-fluid bg-light">
-        <h1 class="m-5">Produtos</h1>
-        <div class="container-fluid w-100 d-flex align-items-center justify-content-center flex-wrap bg-light"
+    <main class="container-fluid">
+        <h2 id="produto-contagem" class="mb-5 mx-5 pt-5">Produtos</h2>
+        <div class="container-fluid w-100 d-flex align-items-center justify-content-center flex-wrap"
             id="lista-produtos">
         </div>
     </main>
 
-
-    <footer class="p-1 mt-4">
-        <div class='row p-3 text-center flex-wrap justify-content-center' id="newsletter" action="">
-            <div class="p-1 col-12 col-md-6">
+    <footer>
+        <div class='p-3 text-center' id="newsletter">
+            <div class="p-1 container-fluid">
                 <h4 class="text-start">ENTRE EM NOSSA NEWSLETTER,</h4>
-                <p class="text-start" for="email">Inscreva-se para receber ofertas e
+                <p class="text-start">Inscreva-se para receber ofertas e
                     descontos
                     exclusivos!</p>
             </div>
-            <form class="p-1 col-12 col-md-6 d-flex nl-email align-items-center">
+
+            <form class="p-1 d-flex nl-email container-fluid">
                 <input class="search-input form-control" type="email" name="email" id="email"
                     placeholder="Digite o seu email.." required>
-                <button class="search-input" type="submit">CADASTRAR</button>
+                <button class="hover-highlight" type="submit">CADASTRAR</button>
             </form>
         </div>
 
@@ -188,6 +189,7 @@
         </div>
         <small>&copy; 2025 Loja de Informática&trade; Todos os direitos reservados.</small>
     </footer>
+
     <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
