@@ -68,7 +68,7 @@ function criarPáginaProduto() {
         estoqueEl.innerHTML = p.estoque > 0 ? `${p.estoque} Unidades Disponíveis` : "Produto Esgotado";
 
         // Mudando o conteúdo dos elementos de acordo com o produto
-        imgEl.src = `img/produtos/${p.id}.png`;
+        imgEl.src = `/Loja/img/produtos/${p.id}.png`;
         nomeEl.innerHTML = p.nome;
         marcaEl.innerHTML = p.fabricante;
         modeloEl.innerHTML = p.modelo;
