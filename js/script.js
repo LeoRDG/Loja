@@ -16,7 +16,7 @@ window.addEventListener("scroll", () => {
     }
 })
 
-fetch("../data.json").then(response => response.json()).then(data => {
+fetch("https://leordg.github.io/Loja/data.json").then(response => response.json()).then(data => {
     /* Lê os dados de produtos */
 
     // Calcular descontos
